@@ -1,0 +1,19 @@
+{
+  "name": "nodejssession",
+  "version": "1.0.0",
+  "description": "Basic nodejs files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahajansohan312/nodeJSSession.git"
+  },
+  "author": "Sohan Mahajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahajansohan312/nodeJSSession/issues"
+  },
+  "homepage": "https://github.com/mahajansohan312/nodeJSSession#readme"
+}
