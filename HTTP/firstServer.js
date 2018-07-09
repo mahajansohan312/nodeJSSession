@@ -6,6 +6,7 @@ const port = 3000;
 // http://localhost:3000/?year=2017&month=July
 const server = http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
+    console.log(url.parse(req.url, true))
     var q = url.parse(req.url, true).query;
     var txt = q.year + " " + q.month;
     res.end(txt);
