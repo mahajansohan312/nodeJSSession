@@ -48,10 +48,10 @@ exports.loginUser = (logObj, cb) => {
 
             let four = JSON.parse(three)
             console.log("Username : ", four[0].username);
-            console.log(three.indexOf(os.EOL))
-                // let xcz = xx.toString().trim();
-                // user = JSON.parse(three)
-                // console.log(user)
+            console.log(three.indexOf(os.EOL));
+            // let xcz = xx.toString().trim();
+            // user = JSON.parse(three)
+            // console.log(user)
         })
         /* const src = fs.createReadStream('./db', { encoding: 'utf8' });
     let found = false;

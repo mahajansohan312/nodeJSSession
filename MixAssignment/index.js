@@ -52,12 +52,12 @@ const createServer = () => {
 
     const server = http.createServer(function(req, res) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        console.log(url.parse(req.url, true))
+        // console.log(url.parse(req.url, true))
         let request = url.parse(req.url, true);
         var q = url.parse(req.url, true).query;
-        console.log(typeof request);
-        console.log(Object.keys(request))
-        console.log(request.pathname)
+        // console.log(typeof request);
+        // console.log(Object.keys(request))
+        // console.log(request.pathname)
         switch (request.pathname) {
             case '/login':
                 routes.routeForLogin(q);
