@@ -26,6 +26,7 @@ exports.registerUser = (regObj, cb) => {
     }
     let some = JSON.stringify(storeObj);
     let store = some + os.EOL;
+    console.log(store.indexOf(os.EOL))
     fs.open('db', 'a', 666, function(e, id) {
         fs.write(id, store, null, 'utf8', () => {
             fs.close(id, function() {
@@ -37,7 +38,22 @@ exports.registerUser = (regObj, cb) => {
 }
 
 exports.loginUser = (logObj, cb) => {
-    /* const src = fs.createReadStream('./db', { encoding: 'utf8' });
+    const data = fs.readFile('./db', (ee, xx) => {
+            console.log(xx.toString());
+            let one = xx.toString();
+            // let two = one.replace(`${/os.EOL/g}`, ',')
+            let two = one.replace(/(?:\r\n|\r|\n)/g, ',');
+
+            let three = ("[" + two.slice(0, -1) + "]").trim()
+
+            let four = JSON.parse(three)
+            console.log("Username : ", four[0].username);
+            console.log(three.indexOf(os.EOL))
+                // let xcz = xx.toString().trim();
+                // user = JSON.parse(three)
+                // console.log(user)
+        })
+        /* const src = fs.createReadStream('./db', { encoding: 'utf8' });
     let found = false;
     src.on('open', (a) => {
         // console.log(a)
@@ -70,11 +86,11 @@ exports.loginUser = (logObj, cb) => {
  */
 }
 
-/* exports.initDatabse(() => {
-    exports.registerUser({ user: 'sohan', pass: 123 }, () => {
+exports.initDatabse(() => {
+    exports.registerUser({ user: 'samsunsg', pass: 123 }, () => {
         exports.loginUser({ user: 'sohan', pass: 123 }, () => {
 
         })
     })
 
-}) */
+})
