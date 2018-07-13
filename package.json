@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mahajansohan312/nodeJSSession/issues"
   },
-  "homepage": "https://github.com/mahajansohan312/nodeJSSession#readme"
+  "homepage": "https://github.com/mahajansohan312/nodeJSSession#readme",
+  "dependencies": {
+    "request": "^2.87.0"
+  }
 }

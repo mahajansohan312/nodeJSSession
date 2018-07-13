@@ -1,6 +1,7 @@
 const firstVariable = 1;
 let secondVariable = 2;
 var fourthVariable = 4;
+var thirdVariable = "teststststst";
 
 function functionOne() {
     thirdVariable = "Three";
@@ -8,12 +9,15 @@ function functionOne() {
     console.log("firstVariable" + firstVariable);
     console.log("secondVariable" + secondVariable);
     // console.log(this);
+    return "hi"
 };
-functionOne();
+
+setTimeout(() => {
+    let x = functionOne();
+    console.log("Return from fun one - ", x)
+}, 5000)
+
 console.log("thirdVariable" + thirdVariable);
-/*setTimeout(() => {
-    console.log("thirdVariable" + thirdVariable);
-}, 50000)*/
 
 // console.log(this);
 let elements = [

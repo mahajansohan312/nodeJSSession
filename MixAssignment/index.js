@@ -60,7 +60,13 @@ const createServer = () => {
         // console.log(request.pathname)
         switch (request.pathname) {
             case '/login':
-                routes.routeForLogin(q);
+                routes.routeForLogin(q, (iLog) => {
+                    console.log("in Index.js @ /login : ", iLog)
+                    let ret = iLog;
+                    ret.tcpPort = 3001;
+                    var txt = JSON.stringify(ret);
+                    res.end(txt);
+                });
                 break;
             case '/register':
                 routes.routeForRegister(q);
@@ -71,9 +77,9 @@ const createServer = () => {
                 res.end(txt);
                 break;
         }
-        var q = url.parse(req.url, true).query;
-        var txt = q.year + " " + q.month;
-        res.end(txt);
+
+        // var txt = q.year + " " + q.month;
+        // res.end(txt);
     })
 
     server.listen(port, hostname, () => {

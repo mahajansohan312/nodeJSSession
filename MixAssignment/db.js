@@ -39,51 +39,28 @@ exports.registerUser = (regObj, cb) => {
 
 exports.loginUser = (logObj, cb) => {
     const data = fs.readFile('./db', (ee, xx) => {
-            console.log(xx.toString());
-            let one = xx.toString();
-            // let two = one.replace(`${/os.EOL/g}`, ',')
-            let two = one.replace(/(?:\r\n|\r|\n)/g, ',');
+        console.log(xx.toString());
+        let one = xx.toString();
 
-            let three = ("[" + two.slice(0, -1) + "]").trim()
+        let two = one.replace(/(?:\r\n|\r|\n)/g, ',');
 
-            let four = JSON.parse(three)
-            console.log("Username : ", four[0].username);
-            console.log(three.indexOf(os.EOL));
-            // let xcz = xx.toString().trim();
-            // user = JSON.parse(three)
-            // console.log(user)
-        })
-        /* const src = fs.createReadStream('./db', { encoding: 'utf8' });
-    let found = false;
-    src.on('open', (a) => {
-        // console.log(a)
-    })
+        let three = ("[" + two.slice(0, -1) + "]").trim()
 
-    src.on('data', (chunk) => {
-        console.log(typeof chunk.toString('utf8'));
-        let user = chunk.toString();
-        if (typeof user == 'string' && user.indexOf('{') != -1) {
-            console.log("Haha", user)
-            console.log("I am", typeof user)
-            xcz = "'" + user + "'";
-            console.log("xcz", xcz)
-            user = JSON.parse(xcz)
+        let four = JSON.parse(three)
 
-            if (logObj.user == user.user && logObj.pass == user.pass) {
-                console.log("Authorised");
-                found = true;
+        console.log("Username : ", four[0].username);
+        console.log(three.indexOf(os.EOL));
+        four.forEach((iUser) => {
+            console.log("iUser ", iUser)
+            if (iUser.username === logObj.user && iUser.pass === logObj.pass) {
+                console.log("Authenticated");
+                cb({ status: 200 })
             }
-        }
-    });
-    src.on('end', () => {
-        console.log('File reading completed');
-        if (found) {
-            cb(200)
-        } else {
-            cb(401)
-        }
+        })
+
+
     })
- */
+
 }
 
 /* exports.initDatabse(() => {

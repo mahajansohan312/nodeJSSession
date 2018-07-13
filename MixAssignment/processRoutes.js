@@ -1,9 +1,10 @@
 const db = require('./db.js');
 
-exports.routeForLogin = (loginObj) => {
+exports.routeForLogin = (loginObj, iloginCB) => {
     console.log(loginObj);
     db.loginUser(loginObj, (iLoggedIn) => {
         console.log(iLoggedIn);
+        iloginCB(iLoggedIn);
     })
 }
 
