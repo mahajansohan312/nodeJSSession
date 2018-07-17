@@ -46,6 +46,6 @@
 
 ## **Assignments related to above topics**
 
-1. [Assignment 1](/OS%20Assignment/README.md)
+1. [Assignment 1](/OS%20Assignment/)
 2. [Assignment 2]
 3. [Assignment 3]
