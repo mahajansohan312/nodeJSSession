@@ -16,7 +16,8 @@
 ### 1. Basics
 
 #### 1. Basics of JavaScript
-     An example of javascript basics, it contains details about basic of declaring variables and scope of variables - their access limitations
+     An example of javascript basics, it contains details about basic of declaring 
+     variables and scope of variables - their access limitations
 #### 2. Callback examples
      An example that contain simple example about callback
 #### 3. RequireJS and Modular Structure example
@@ -45,6 +46,6 @@
 
 ## **Assignments related to above topics**
 
-1. [Assignment 1](/OS%20Assignment/ProblemStatement.md)
+1. [Assignment 1](/OS%20Assignment/README.md)
 2. [Assignment 2]
 3. [Assignment 3]

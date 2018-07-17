@@ -4,5 +4,5 @@
 
 ### Let see the execution diagram for more details - 
 
-![FlowDiagram](/nodejsSession_OS_Assignment.png.png)
+![FlowDiagram](/OS%20Assignment/nodejsSession_OS_Assignment.png)
 
