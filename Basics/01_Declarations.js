@@ -3,6 +3,12 @@ let secondVariable = 2;
 var fourthVariable = 4;
 var thirdVariable = "teststststst";
 
+console.log("Global test of firstVariable :",global.firstVariable);
+console.log("Global test of secondVariable :",global.secondVariable);
+console.log("Global test of fourthVariable :",global.fourthVariable);
+console.log("Global test of thirdVariable :",global.thirdVariable);
+
+
 function functionOne() {
     thirdVariable = "Three";
 
@@ -11,6 +17,26 @@ function functionOne() {
     // console.log(this);
     return "hi"
 };
+
+function varTest() {
+    var x = 1;
+    if (true) {
+      var x = 2;  // same variable!
+      console.log(x);  // 2
+    }
+    console.log(x);  // 2
+  }
+  varTest();
+  function letTest() {
+    let x = 1;
+    if (true) {
+      let x = 2;  // different variable
+      console.log(x);  // 2
+    }
+    console.log(x);  // 1
+  }
+  letTest();
+  
 
 setTimeout(() => {
     let x = functionOne();
